@@ -1,0 +1,13 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body{ padding: 5%;}
+
+section div{ border-bottom:1px solid #f1f1f1; border-top:1px solid #f1f1f1; padding-top: 20px;  padding-bottom: 20px; margin-bottom: 20px;}
+
+input[type=button]{padding: 5px; font-size: 14px; font-family: Arial;}
+input[type=checkbox]{ margin-left: 10px;}
+
+ol{margin-bottom: 20px;}
+ol li{ padding: 5px; }
+ol li:nth-child(odd){ background-color: #f1f1f1; }
+ol li:nth-child(even){ background-color: #ccc;}

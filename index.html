@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <title></title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width">
+
+            <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+            <link rel="stylesheet" href="lib/css/normalize.css">
+            <link rel="stylesheet" href="lib/css/main.css">
+        </head>
+    <body>
+
+
+        <header> 
+            <h1>Awesome To Do List</h1> 
+        </header>
+
+        <section>
+            <div>
+                <input type="text" name="" id="toDoItem">
+                <input type="button" value="Add Item" class="addItem">
+                <input type="button" value="Delete Checked" class="deleteItem">
+            </div>
+
+            <ol id="toDoList"> </ol>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <script>
+                $("document").ready(function(e){
+                    $(".addItem").click(function(){
+                    var itemCapture = $("input#toDoItem").val();
+                    $("ol#toDoList").append("<li><p>" + itemCapture + "<input type='checkbox' class='deleteItem'></p></li>");
+                    });
+
+                    $(".deleteItem").click(function(){
+                    $("input.deleteItem:checked").parents("li").remove();
+                    });
+                });
+            </script>
+
+    </body>
+</html>
